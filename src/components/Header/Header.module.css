@@ -1,0 +1,29 @@
+.header {
+    position: relative;
+    grid-area: h;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.logo img{
+    width: 200px;
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    height: auto;
+}
+
+.header::before {
+    content: "RedStudia";
+    margin: 0 auto;
+    color: #ff4a1d;
+    transform: translateY(50%);
+    right: 0;
+    left: 0;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    font-size: 90px;
+    font-weight: 700;
+}
