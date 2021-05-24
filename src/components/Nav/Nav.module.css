@@ -3,15 +3,15 @@
     text-align: center;
     grid-area: n;
     background-color: #fff;
-    margin-top: 100px;
+    margin-top: 30px;
     margin-right: 30px;
     border-radius: 15px;
-    height: 240px;
     box-shadow: 0px 2px 3px 1px rgba(36,34,34,0.11);
 }
 
 .nav ul li {
-    padding-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     list-style-type: none;
 }
 
@@ -19,4 +19,9 @@
     text-decoration: none;
     color: #001f41;
     font-weight: 700;
+    cursor: pointer;
+    z-index: 10;
+}
+.active{
+    color: #ff4a1d;
 }

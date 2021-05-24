@@ -1,0 +1,41 @@
+.messages{
+    /*padding: 20px;*/
+}
+.addMessage{
+    margin-left: 20px;
+    /*transform: translateY(-50%);*/
+}
+
+.ava{
+    width: 50px;
+    border-radius: 50px;
+    /*margin-bottom: 30px;*/
+    margin-top: 30px;
+    margin-left: 20px;
+}
+.dialogs{
+    display:grid;
+    grid-template-columns: 3fr 10fr;
+}
+.dialogsItems{
+    /*padding: 20px;*/
+}
+.dialog{
+    color: #001f41;
+    transform: translateY(-50%);
+    margin-left: 10px;
+    padding-bottom: 20px;
+    margin-top: 55px;
+
+}
+.active{
+    color: #ff4a1d;
+}
+.test{
+    color: #001f41;
+    text-decoration: none;
+    padding: 20px;
+}
+.textarea{
+    padding-top: 10px;
+}
