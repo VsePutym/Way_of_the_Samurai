@@ -1,0 +1,44 @@
+.userContainer{
+    display: grid;
+    grid-template-areas:
+            'R W';
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 1fr 8fr;
+    align-items: center;
+    border: 1px solid #000;
+    text-align: center;
+    margin: 40px;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.userImg img{
+    border-radius: 50px;
+    width: 70px;
+}
+.userButton{}
+.userInfo{
+    grid-area: W;
+    display: grid;
+    grid-template-areas:
+    'n s l'
+}
+.userName{grid-area: n}
+.userStatus{grid-area: s}
+.userLocation{
+    grid-area: l;
+}
+.user{
+    grid-area: R;
+}
+
+.PageNumber{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.selectedPage{
+    text-decoration: none;
+    color: #ff4a1d;
+    cursor: pointer;
+}

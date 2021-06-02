@@ -1,20 +1,26 @@
-import s from './News.module.css';
-import {NavLink} from "react-router-dom";
-
-let NewsItem = (props) => {
-  let path = "/news" + props.id;
-  return (
-    <div><NavLink to={path}>{props.test}</NavLink></div>
-  );
-}
-
 const News = (props) => {
-  let NewsElement = props.state.NewsItem.map((d,i) => <NewsItem key={i} id={d.id} test={d.test}/>)
+
+  const NewsPage2 = props.newsPage.NewsItem2.map(n2 => {
+    return (
+      <div key={n2.id} newsItem2={n2.newsItem2}>
+        {n2.newsItem2}
+      </div>
+    )
+  })
+
+  const NewsPage = props.newsPage.NewsItem.map(n => {
+    return(
+      <div key={n.id} newsItem={n.newsItem}>
+        {n.newsItem}
+      </div>
+    )
+  })
   return (
-    <div>
-      {NewsElement}
-    </div>
-  );
+   <div>
+     {NewsPage}
+     {NewsPage2}
+   </div>
+  )
 }
 
 export default News;

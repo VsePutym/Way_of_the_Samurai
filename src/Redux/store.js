@@ -1,6 +1,5 @@
-const ADD_POST = 'ADD-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
+import dialogsReducer from "./dialogs_reducer";
+import profileReducer from "./profile_reducer";
 
 let store = {
   _state: {
@@ -36,6 +35,8 @@ let store = {
       ]
     }
   }, //end _state
+
+
   _callSubscriber() {
     console.log('State change');
   },
@@ -48,46 +49,11 @@ let store = {
   },
 
   dispatch (action){ //мы отправляем в стор какой-то объект, action - object
-    if(action.type === ADD_POST){
-      // Создаём новый пост и прокидываем его в UL
-      let newPost = {
-        id: 4,
-        message: this._state.profilePage.newPostText,
-        likes: 0
-      }
-      this._state.profilePage.posts.push(newPost);
-      this._state.profilePage.newPostText = '';
-      this._callSubscriber(this._state);
-    } else if(action.type === UPDATE_NEW_POST_TEXT){
-      //То , что записанно в UL Текстареи мы изменяем в store._state.profilePage.newPostText
-      this._state.profilePage.newPostText = action.newText;
-      this._callSubscriber(this._state)
-    } else if(action.type === UPDATE_NEW_MESSAGE_TEXT){
-      //То , что записанно в UL Текстареи мы изменяем в store._state.dialogsPage.newMessageText
-      this._state.dialogsPage.newMessageText = action.newTextDialog;
-      this._callSubscriber(this._state)
-    }
+    this._state.profilePage = profileReducer(this._state.profilePage, action);
+    this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
+    this._callSubscriber(this._state)
   }
 }// End Store
 
-export const addPostActionCreator = () => {
-  return {
-    type: 'ADD-POST'
-  }
-}
-
-export const updateNewPostTextActionCreator = (text) => {
-  return {
-    type: 'UPDATE-NEW-POST-TEXT',
-    newText : text
-  }
-}
-
-export const updateNewMessageText = (text) => {
-  return {
-    type: 'UPDATE-NEW-MESSAGE-TEXT',
-    newTextDialog: text
-  }
-}
 export default store;
 window.store = store;

@@ -1,8 +1,9 @@
 import s from './Settings.module.css';
 
-const Settings = () => {
+const Settings = (props) => {
+
   return (
-    <div className='test'>Settings</div>);
+    <div className={s.maineSattings}>Settings</div>);
 };
 
 export default Settings;
