@@ -4,11 +4,14 @@ import UserPhotos from '../../assets/img/user.png'
 import React from "react";
 
 class Users extends React.PureComponent {
+  constructor(props) {
+    super(props);
+  }
+
   componentDidMount() {
     axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`).then(response => {
       this.props.setUsers(response.data.items);
       this.props.setTotalUsersCount(response.data.totalCount);
-      debugger
     });
   }
 
@@ -30,13 +33,13 @@ render() {
 
     return (
       <div>
-        <div className={s.PageNumber}>
-          <div>
-            {pages.map(p => {
-             return <span className={this.props.currentPage === p && s.selectedPage} onClick={(e) => {this.onPageChange(p)}}>{p}</span>
-            })}
-          </div>
-        </div>
+        {/*<div className={s.PageNumber}>*/}
+        {/*  <div>*/}
+        {/*    {pages.map(p => {*/}
+        {/*     return <span className={this.props.currentPage === p && s.selectedPage} onClick={(e) => {this.onPageChange(p)}}>{p}</span>*/}
+        {/*    })}*/}
+        {/*  </div>*/}
+        {/*</div>*/}
         {this.props.users.map( u => <div key={u.id}>
           <div className={s.userContainer}>
             <div className={s.user}>
