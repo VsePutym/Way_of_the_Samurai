@@ -12,7 +12,6 @@ const Users = (props) => {
     pages.push(i);
   }
 
-
   return (
     <div>
       <div className={s.PageNumber}>
