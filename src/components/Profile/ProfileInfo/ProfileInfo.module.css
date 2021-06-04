@@ -1,3 +1,22 @@
-.discriptionBlock{
+.userGrid{
     padding: 20px;
+    display: grid;
+    grid-template-areas: "i c s";
+    grid-template-columns: 2fr 2fr 2fr;
+}
+
+.userFullName{
+    font-size: 30px;
+    text-align: center;
+    padding: 20px;
+}
+.userImg{
+    grid-area: i;
+}
+.userContacts{
+    grid-area: c;
+}
+.status{
+    margin: 20px;
+    grid-area: s;
 }

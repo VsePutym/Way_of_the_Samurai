@@ -11,25 +11,28 @@
     border-radius: 30px;
     padding: 10px;
 }
-
+.User{
+    grid-area: R;
+}
 .userImg img{
+    grid-area: r;
     border-radius: 50px;
     width: 70px;
+    padding-top: 20px;
 }
-.userButton{}
+.userButton{
+    padding-bottom: 20px;
+}
 .userInfo{
     grid-area: W;
     display: grid;
     grid-template-areas:
-    'n s l'
+    'r n s l'
 }
 .userName{grid-area: n}
 .userStatus{grid-area: s}
 .userLocation{
     grid-area: l;
-}
-.user{
-    grid-area: R;
 }
 
 .PageNumber{

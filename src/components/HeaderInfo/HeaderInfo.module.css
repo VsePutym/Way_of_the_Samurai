@@ -1,9 +1,31 @@
 .test {
     text-align: center;
-    grid-area: h2;
     margin-top: 20px;
+    grid-area: h2;
+    display: grid;
+    grid-template-areas: 'b l';
+
+    grid-template-columns: 2fr 8fr;
 }
 
 .btn{
+    grid-area: b;
     padding: 10px 40px;
+}
+
+.loginBlock{
+    grid-area: l;
+}
+.loginBlock a {
+    z-index: 100;
+    color: #ff4a1d;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.LogIn{
+    z-index: 100;
+    color: #ff4a1d;
+    font-size: 25px;
+    text-decoration: none;
 }

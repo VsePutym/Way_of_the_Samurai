@@ -4,6 +4,7 @@ import dialogsReducer from "./dialogs_reducer";
 import users_reducer from "./users_reducer";
 import news_reducer from "./news_reducer";
 import settings_reducer from "./settings_reducer";
+import authReducer from "./auth_reducer";
 
 //Объединяем редьюсеры
 let reducers = combineReducers({
@@ -11,7 +12,8 @@ let reducers = combineReducers({
   profilePage: profileReducer,
   dialogsPage: dialogsReducer,
   usersPage: users_reducer,
-  settingsPage: settings_reducer
+  settingsPage: settings_reducer,
+  auth: authReducer
 });
 
 let store = createStore(reducers);
